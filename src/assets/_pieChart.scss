@@ -1,0 +1,20 @@
+.circleChart
+{
+    display: flex;
+    flex-direction: row;
+    h1
+    {
+        color: $primary;
+    }
+    div
+    {
+        text-align: left;
+    }
+    div
+    {
+        h2
+        {
+            color: $secondary;
+        }
+    }
+}

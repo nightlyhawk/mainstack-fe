@@ -46,14 +46,16 @@ export const TopSources = () => {
             <h1>Top Offers</h1>
             { error && <div>{error}</div> }
             { loading && <div>Loading.....</div> }
-            { data &&  data.map((item: data) => (
+            { data &&  data.map((item: data) => {
+               return (
                 <div className="text">
                 <p> 
                  {item.top_sources.source}
                    <span>{item.top_sources.count}</span>
                  </p>
             </div>
-            )) }
+            )
+            }) }
             <div className="chart">
             <Pie
         data={chartData}

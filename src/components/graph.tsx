@@ -16,11 +16,11 @@ export const Graph = () => {
         "https://fe-task-api.mainstack.io/", 
     );
     const [chartData, setChartData] = useState({
-        labels: data.map((item: data) => item.graph_data.views), 
+        labels: data.map((item: any) => item.graph_data.views), 
         datasets: [
           {
             label: "Page Views",
-            data: data.map((item: data) => item.graph_data.views.keys.values),
+            data: data.map((item: any) => item.graph_data.views.keys.values),
             backgroundColor: [
                 "#599EEA",
                 

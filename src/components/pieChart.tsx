@@ -15,11 +15,11 @@ export const PieChartI = () => {
         "https://fe-task-api.mainstack.io/", 
     );
     const [chartData, setChartData] = useState({
-        labels: data.map((item: data) => item.top_locations.country), 
+        labels: data.map((item: any) => item.top_locations.country), 
         datasets: [
           {
             label: "Countries",
-            data: data.map((item: data) => item.top_locations.percent),
+            data: data.map((item: any) => item.top_locations.percent),
             backgroundColor: [
                 "#599EEA",
                 "#844FF6",

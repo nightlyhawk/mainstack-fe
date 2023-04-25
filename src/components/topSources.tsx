@@ -46,7 +46,7 @@ export const TopSources = () => {
             <h1>Top Offers</h1>
             { error && <div>{error}</div> }
             { loading && <div>Loading.....</div> }
-            { data &&  data.map((item: data) => {
+            { data &&  data.map((item: any) => {
                return (
                 <div className="text">
                 <p> 

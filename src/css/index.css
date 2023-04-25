@@ -1,13 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 .dash {
@@ -23,9 +16,9 @@ code {
 .circleChart h1 {
   color: black;
 }
-.circleChart div {
+.circleChart .text {
   text-align: left;
 }
-.circleChart div h2 {
+.circleChart .chart h2 {
   color: #FF5403;
 }

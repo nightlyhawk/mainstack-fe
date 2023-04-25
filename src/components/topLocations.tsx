@@ -17,14 +17,14 @@ export const TopLocations = () => {
             { error && <div>{error}</div> }
             { loading && <div>Loading.....</div> }
             { data &&  data.map((item: data) => (
-                <div>
+                <div className="text">
                 <p> 
                  {item.top_locations.country}
                    <span>{item.top_locations.count}</span>
                  </p>
             </div>
             )) }
-            <div>
+            <div className="chart">
                 <h2>View full report</h2>
             <Pie
         data={chartData}

@@ -14,7 +14,7 @@ export const TopLocations: React.FunctionComponent = () => {
 
 
     return (
-         <div className="circleChart, right">
+         <div className="circleChart, left">
             <h1>Top Locations</h1>
             <div className="text">
             { data &&  data.top_locations.map((item) => {

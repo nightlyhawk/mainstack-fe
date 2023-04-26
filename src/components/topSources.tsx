@@ -35,8 +35,8 @@ export const TopSources: React.FunctionComponent = () => {
     );
 
     return (
-         <div className="circleChart left">
-            <h1>Top Offers</h1>
+         <div className="circleChart right">
+            <h1>Top Sources</h1>
             {loading && <div>Loading....</div> }
             {error && <div>{error}</div> }
             <div className="text">

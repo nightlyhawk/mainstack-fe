@@ -1,27 +1,27 @@
-import { useFetch } from "./useFetch";
+import { useAxios } from './useAxios';
 import { Pie } from "react-chartjs-2";
-import { data } from "./topSources";
+import { IJsonResponse } from "./topSources";
 import { PieChartI } from "./pieChart";
 
 
 
-export const TopLocations = () => {
-    const { chartData } = PieChartI();
-    const { data, loading, error } = useFetch(
-        "https://fe-task-api.mainstack.io/", 
-    );
+export const TopLocations: React.FunctionComponent = () => {
+
+  const { chartData } = PieChartI();
+  const [loading, data, error, request] = useAxios<IJsonResponse>(
+    {method: 'GET', url: "https://fe-task-api.mainstack.io/"}
+  );
+
 
     return (
          <div className="circleChart">
             <h1>Top Locations</h1>
-            { error && <div>{error}</div> }
-            { loading && <div>Loading.....</div> }
-            { data &&  data.map((item: any) => {
+            { data &&  data.top_locations.map((item) => {
               return (
                 <div className="text">
                 <p> 
-                 {item.top_locations.country}
-                   <span>{item.top_locations.count}</span>
+                 {item.country}
+                   <span>{item.count}</span>
                  </p>
             </div>
             )}) }

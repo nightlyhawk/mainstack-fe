@@ -1,8 +1,8 @@
 import Chart from "chart.js/auto";
 import { CategoryScale, Filler } from "chart.js";
 import { useState } from "react";
-import { useFetch } from "./useFetch";
-import { data } from "./topSources";
+import { useAxios } from './useAxios';
+import { IJsonResponse } from "./topSources";
 
 
 
@@ -10,17 +10,24 @@ Chart.register(CategoryScale);
 Chart.register(Filler);
 
 export const Graph = () => {
-
-
-    const { data } = useFetch(
-        "https://fe-task-api.mainstack.io/", 
-    );
+ const [loading, data, error, request] = useAxios<IJsonResponse>(
+  {method: 'GET', url: "https://fe-task-api.mainstack.io/"}
+);
+  // function value(){
+  //   for(const key in data?.graph_data.views){
+      
+  //     {key}: data?.graph_data.views[key]
+  //   }
+  // }
+  const view = data?.graph_data.views
+  const keys = Object.keys(view);
+  const values = Object.values(view);
     const [chartData, setChartData] = useState({
-        labels: data.map((item: any) => item.graph_data.views), 
+        labels: [keys.forEach(val => val)], 
         datasets: [
           {
             label: "Page Views",
-            data: data.map((item: any) => item.graph_data.views.keys.values),
+            data:[values.forEach(val => val)] ,
             backgroundColor: [
                 "#599EEA",
                 

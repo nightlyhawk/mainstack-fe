@@ -1,8 +1,8 @@
 import Chart from "chart.js/auto";
 import { CategoryScale } from "chart.js";
 import { useState } from "react";
-import { useFetch } from "./useFetch";
-import { data } from "./topSources";
+import { useAxios } from './useAxios';
+import { IJsonResponse } from "./topSources";
 
 
 
@@ -10,15 +10,16 @@ Chart.register(CategoryScale);
 
 
 export const PieChartII = () => {
-    const { data } = useFetch(
-        "https://fe-task-api.mainstack.io/", 
-    );
+  const [loading, data, error, request] = useAxios<IJsonResponse>(
+    {method: 'GET', url: "https://fe-task-api.mainstack.io/"}
+  );
+
     const [chartData, setChartData] = useState({
-        labels: data.map((item: any) => item.top_sources.source), 
+        labels: data?.top_sources.map((item) => item.source), 
         datasets: [
           {
             label: "Countries",
-            data: data.map((item: any) => item.top_sources.percent),
+            data: data?.top_sources.map((item) => item.percent),
             backgroundColor: [
                 "#599EEA",
                 "#844FF6",

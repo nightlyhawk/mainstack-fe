@@ -1,6 +1,7 @@
 import { useAxios } from './useAxios';
 import { PieChartII } from "./pieChartII";
 import { Doughnut } from "react-chartjs-2";
+import { Chart as ChartJS } from 'chart.js/auto'
 
 
 export interface IJsonResponse {

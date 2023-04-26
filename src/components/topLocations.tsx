@@ -2,6 +2,7 @@ import { useAxios } from './useAxios';
 import { Doughnut } from "react-chartjs-2";
 import { IJsonResponse } from "./topSources";
 import { PieChartI } from "./pieChart";
+import { Chart as ChartJS } from 'chart.js/auto'
 
 
 

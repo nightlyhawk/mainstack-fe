@@ -1,7 +1,8 @@
 import { Line } from "react-chartjs-2";
 import { Graph } from "./graph";
+import { Chart as ChartJS } from 'chart.js/auto'
 
-export  const Chart = () => {
+export  const Charto = () => {
 const { chartData } = Graph();
   return (
     <div className="chart-container">

@@ -1,7 +1,4 @@
 import { useAxios } from './useAxios';
-import { PieChartII } from "./pieChartII";
-import { Doughnut } from "react-chartjs-2";
-import { Chart } from 'chart.js/auto'
 
 
 export interface IJsonResponse {
@@ -29,8 +26,6 @@ export interface IJsonResponse {
 
 
 export const TopSources: React.FunctionComponent = () => {
-
-    const { chartData } = PieChartII();
     const [loading, data, error, request] = useAxios<IJsonResponse>(
       {method: 'GET', url: "https://fe-task-api.mainstack.io/"}
     );
@@ -53,22 +48,7 @@ export const TopSources: React.FunctionComponent = () => {
             </div>
             <div className="chart">
             <h3>View full report</h3>
-            <div style={{ width: 300 }}>
-            <Doughnut
-        data={chartData}
-        options={{
-         responsive: true,
-         plugins: {
-           legend: {
-             position: 'left',
-           },
-           title: {
-              display: true,
-            }
-          }
-        }}
-      />
-            </div>
+            
             </div>
 
          </div>

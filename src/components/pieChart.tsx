@@ -1,7 +1,7 @@
 
 import Chart from "chart.js/auto";
 import { CategoryScale } from "chart.js";
-import { useState } from "react";
+import { Doughnut } from "react-chartjs-2";
 import { useAxios } from './useAxios';
 import { IJsonResponse } from "./topSources";
 
@@ -15,7 +15,7 @@ export const PieChartI = () => {
     {method: 'GET', url: "https://fe-task-api.mainstack.io/"}
   );
 
-    const [chartData, setChartData] = useState({
+    var chartData = {
         labels: data?.top_locations.map((item) => item.country), 
         datasets: [
           {
@@ -31,6 +31,23 @@ export const PieChartI = () => {
             //hoverOffset: 4
           }
         ]
-      });
-  return {chartData}
+      };
+  return (
+    <div style={{ width: 300 }}>
+            <Doughnut
+        data={chartData}
+        options={{
+         responsive: true,
+         plugins: {
+           legend: {
+             position: 'left',
+           },
+           title: {
+              display: true,
+            }
+          }
+        }}
+      />
+            </div>
+  )
 }

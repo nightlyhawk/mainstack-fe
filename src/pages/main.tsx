@@ -2,8 +2,8 @@ import { Nav } from "../components/nav";
 import { DashBoard } from "../components/dashBoard";
 import { TopLocations } from "../components/topLocations";
 import { TopSources } from "../components/topSources";
-import { Charto } from "../components/chart";
 import { Header } from "../components/header";
+import { Graph } from "../components/graph";
 
 
 
@@ -13,7 +13,7 @@ export const Main = () => {
         <DashBoard />
         <Nav />
         <Header />
-        <Charto />
+        <Graph />
         <TopLocations />
         <TopSources />
        </div>

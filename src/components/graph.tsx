@@ -1,9 +1,8 @@
 import Chart from "chart.js/auto";
 import { CategoryScale, Filler } from "chart.js";
-import { useState } from "react";
+import { Line } from "react-chartjs-2";
 import { useAxios } from './useAxios';
 import { IJsonResponse } from "./topSources";
-import { isObject } from "chart.js/dist/helpers/helpers.core";
 
 
 
@@ -16,7 +15,7 @@ export const Graph = () => {
 );
   
   const view = data?.graph_data.views;
-    const [chartData, setChartData] = useState({
+    var chartData = {
         labels: Object.keys({view}), 
         datasets: [
           {
@@ -31,7 +30,27 @@ export const Graph = () => {
             borderWidth: 2
           },
         ]
-      });
+      };
 
-    return {chartData}
+      return (
+        <div className="chart-container">
+          <h2 style={{ textAlign: "center" }}>Page Views</h2>
+          <h4>All time</h4>
+          <div style={{ width: 700 }}>
+          <Line
+            data={chartData}
+            options={{
+              plugins: {
+                title: {
+                  display: true,
+                },
+                legend: {
+                  display: false
+                }
+              }
+            }}
+          />
+          </div>
+        </div>
+      );
 }

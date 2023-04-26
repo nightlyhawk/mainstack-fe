@@ -5,16 +5,18 @@ body {
   
   .dash { grid-area: a; }
   .nav { grid-area: b; }
-  .chart-container { grid-area: c; }
-  .left { grid-area: d; }
-  .right { grid-area: e; }
+  .header { grid-area: c;}
+  .chart-container { grid-area: d; }
+  .left { grid-area: e; }
+  .right { grid-area: f; }
   
   .grid-container {
     display: grid;
     grid-template-areas:
       'a a b b b b'
       'a a c c c c'
-      'a a d d e e';
+      'a a d d d d'
+      'a a e e f f';
     // gap: 10px;
   }  
   

@@ -9,6 +9,7 @@ import trash from '../icons/delete.svg';
 import add_an_image from '../icons/add_a_photo.svg';
 import file from '../icons/file_present.svg';
 import logo from '../mainstack-logo.svg';
+import profile from '../profile.svg'
 
 
 
@@ -32,6 +33,10 @@ export const DashBoard = () => {
                 <NavLink to="" className='pad'><img src={subscription} alt="subscription" />item 6</NavLink>
                 <NavLink to="" className='pad'><img src={file} alt="file present" />item 7</NavLink>
                 <NavLink to="" className='pad'><img src={alarm} alt="alarm" />item 8</NavLink>
+            </div>
+            <div className='pad prof'>
+                <img src={profile} alt='profile'  />
+                <p>Blessing Daniels</p>
             </div>
 
          </div>

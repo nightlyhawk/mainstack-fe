@@ -2,7 +2,6 @@
 {
     display: flex;
     flex-direction: column;
-    width: 15%;
 }
 .tabs
 {
@@ -16,4 +15,17 @@
 .pad
 {
     padding-left: 40px;
+}
+
+.prof 
+{
+    justify-content: space-between;
+    img
+    {
+        border-radius: 999px;
+    }
+    p
+    {
+        color: gray;
+    }
 }

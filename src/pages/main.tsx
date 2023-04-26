@@ -3,6 +3,7 @@ import { DashBoard } from "../components/dashBoard";
 import { TopLocations } from "../components/topLocations";
 import { TopSources } from "../components/topSources";
 import { Chart } from "../components/chart";
+import { Header } from "../components/header";
 
 
 
@@ -11,10 +12,7 @@ export const Main = () => {
        <div className="grid-container">
         <DashBoard />
         <Nav />
-        <h1>
-            Good morning, Blessing
-        </h1>
-        <p>Checkout your dashboard summary</p>
+        <Header />
         <Chart />
         <TopLocations />
         <TopSources />

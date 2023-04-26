@@ -11,27 +11,30 @@ body {
   grid-area: b;
 }
 
-.chart-container {
+.header {
   grid-area: c;
 }
 
-.left {
+.chart-container {
   grid-area: d;
 }
 
-.right {
+.left {
   grid-area: e;
+}
+
+.right {
+  grid-area: f;
 }
 
 .grid-container {
   display: grid;
-  grid-template-areas: "a a b b b b" "a a c c c c" "a a d d e e";
+  grid-template-areas: "a a b b b b" "a a c c c c" "a a d d d d" "a a e e f f";
 }
 
 .dash {
   display: flex;
   flex-direction: column;
-  width: 15%;
 }
 
 .tabs {
@@ -44,6 +47,16 @@ body {
 
 .pad {
   padding-left: 40px;
+}
+
+.prof {
+  justify-content: space-between;
+}
+.prof img {
+  border-radius: 999px;
+}
+.prof p {
+  color: gray;
 }
 
 .circleChart {

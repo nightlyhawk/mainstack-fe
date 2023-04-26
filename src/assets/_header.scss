@@ -1,0 +1,25 @@
+.header
+{
+    h1
+    {
+        color: $primary;
+    }
+    p
+    {
+        color: gray;
+    }
+    ul
+    {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.focus
+{
+    border: 2px solid $secondary;
+    background-color: lighten($color: $secondary, $amount: 3);
+    border-radius: 5px;
+    color: $secondary;
+}

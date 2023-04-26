@@ -52,6 +52,7 @@ export const TopSources: React.FunctionComponent = () => {
             </div>
             <div className="chart">
             <h3>View full report</h3>
+            <div style={{ width: 500 }}>
             <Doughnut
         data={chartData}
         options={{
@@ -66,6 +67,7 @@ export const TopSources: React.FunctionComponent = () => {
           }
         }}
       />
+            </div>
             </div>
 
          </div>

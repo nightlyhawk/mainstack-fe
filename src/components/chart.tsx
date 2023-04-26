@@ -1,4 +1,4 @@
-import { Pie } from "react-chartjs-2";
+import { Line } from "react-chartjs-2";
 import { Graph } from "./graph";
 
 export  const Chart = () => {
@@ -7,7 +7,8 @@ const { chartData } = Graph();
     <div className="chart-container">
       <h2 style={{ textAlign: "center" }}>Page Views</h2>
       <h4>All time</h4>
-      <Pie
+      <div style={{ width: 700 }}>
+      <Line
         data={chartData}
         options={{
           plugins: {
@@ -20,6 +21,7 @@ const { chartData } = Graph();
           }
         }}
       />
+      </div>
     </div>
   );
 }

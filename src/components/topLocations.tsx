@@ -27,20 +27,22 @@ export const TopLocations: React.FunctionComponent = () => {
             </div>
             <div className="chart">
                 <h3>View full report</h3>
+           <div style={{ width: 500 }}>
             <Doughnut
         data={chartData}
         options={{
-          responsive: true,
-          plugins: {
-            legend: {
-              position: 'left',
-            },
-            title: {
+         responsive: true,
+         plugins: {
+           legend: {
+             position: 'left',
+           },
+           title: {
               display: true,
             }
           }
         }}
       />
+            </div>
             </div>
 
          </div>

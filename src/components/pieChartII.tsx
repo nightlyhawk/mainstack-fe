@@ -19,7 +19,7 @@ export const PieChartII = () => {
         datasets: [
           {
             label: "Countries",
-            data: data?.top_sources.map((item) => item.percent),
+            data: data?.top_sources.map((item) => item.count),
             backgroundColor: [
                 "#599EEA",
                 "#844FF6",
@@ -32,7 +32,7 @@ export const PieChartII = () => {
         ]
       };
   return (
-    <div style={{ width: 300 }}>
+    <div className="donut">
             <Doughnut
         data={chartData}
         options={{

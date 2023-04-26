@@ -1,6 +1,6 @@
 import { useAxios } from './useAxios';
 import { IJsonResponse } from "./topSources";
-import { PieChartII } from './pieChartII';
+import { PieChartI } from './pieChart';
 
 
 
@@ -11,20 +11,20 @@ export const TopLocations: React.FunctionComponent = () => {
 
 
     return (
-         <div className="circleChart, left">
+         <div className="circleChart left">
             <div className="text">
             <h3>Top Locations</h3>
             { data &&  data.top_locations.map((item) => {
               return (
                 <p> 
                  {item.country}
-                   <span>{item.count}</span>
+                   <span>{item.percent}%</span>
                  </p>
             )}) }
             </div>
             <div className="chart">
                 <h3>View full report</h3>
-           <PieChartII />
+           <PieChartI />
             </div>
 
          </div>

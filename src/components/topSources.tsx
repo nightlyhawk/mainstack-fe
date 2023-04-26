@@ -1,4 +1,4 @@
-import { PieChartI } from './pieChart';
+import { PieChartII } from './pieChartII';
 import { useAxios } from './useAxios';
 
 
@@ -42,14 +42,14 @@ export const TopSources: React.FunctionComponent = () => {
                 
                 <p> 
                  {item.source}
-                   <span>{item.count}</span>
+                   <span>{item.percent}%</span>
                  </p>
              )
             }) }
             </div>
             <div className="chart">
             <h3>View full report</h3>
-            <PieChartI />
+            <PieChartII />
             </div>
 
          </div>

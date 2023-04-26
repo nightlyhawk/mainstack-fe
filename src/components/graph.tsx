@@ -1,5 +1,5 @@
 import Chart from "chart.js/auto";
-import { CategoryScale, Filler } from "chart.js";
+import { CategoryScale } from "chart.js";
 import { Line } from "react-chartjs-2";
 import { useAxios } from './useAxios';
 import { IJsonResponse } from "./topSources";
@@ -7,7 +7,6 @@ import { IJsonResponse } from "./topSources";
 
 
 Chart.register(CategoryScale);
-Chart.register(Filler);
 
 export const Graph = () => {
  const [loading, data, error, request] = useAxios<IJsonResponse>(
@@ -25,17 +24,18 @@ export const Graph = () => {
                 "#f9d2c0",
                 
             ],
-            fill: 'origin',
+            fill: true,
             borderColor: "#599EEA",
-            borderWidth: 2
+            tension: 0.2,
           },
         ]
       };
 
       return (
         <div className="chart-container">
-          <h2 style={{ textAlign: "center" }}>Page Views</h2>
+          <h2 style={{ textAlign: "left" }}>Page Views</h2>
           <h4>All time</h4>
+          <h1 style={{ textAlign: "left" }}>500</h1>
           <div style={{ width: 700 }}>
           <Line
             data={chartData}

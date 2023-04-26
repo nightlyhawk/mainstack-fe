@@ -7,12 +7,7 @@
 }
 .text
 {
-    h3
-    {
-        color: $secondary;
-        text-align: right;
-        font-size: $font-sm;
-    }
+   
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -26,9 +21,11 @@
 }
 .chart
 {
-    h2
+    h3
     {
         color: $secondary;
+        text-align: right;
+        font-size: $font-sm;
     }
 }
 .donut
@@ -37,4 +34,5 @@
     position: relative;
     left: 12%;
     bottom: 61px;
+
 }

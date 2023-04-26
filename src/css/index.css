@@ -98,17 +98,14 @@ body {
   display: flex;
   flex-direction: column;
 }
-.text h3 {
-  color: #FF5403;
-  text-align: right;
-  font-size: 14px;
-}
 .text p span {
   padding-left: 10px;
 }
 
-.chart h2 {
+.chart h3 {
   color: #FF5403;
+  text-align: right;
+  font-size: 14px;
 }
 
 .donut {

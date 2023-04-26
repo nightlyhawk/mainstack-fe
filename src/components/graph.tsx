@@ -34,7 +34,7 @@ export const Graph = () => {
       return (
         <div className="chart-container">
           <h2 style={{ textAlign: "left" }}>Page Views</h2>
-          <h4>All time</h4>
+          <h4 style={{ color: "gray" }}>All time</h4>
           <h1 style={{ textAlign: "left" }}>500</h1>
           <div style={{ width: 700 }}>
           <Line

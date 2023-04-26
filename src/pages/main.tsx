@@ -8,7 +8,7 @@ import { Chart } from "../components/chart";
 
 export const Main = () => {
     return (
-       <div>
+       <div className="grid-container">
         <DashBoard />
         <Nav />
         <h1>

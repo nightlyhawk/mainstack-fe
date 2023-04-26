@@ -13,6 +13,9 @@ const { chartData } = Graph();
           plugins: {
             title: {
               display: true,
+            },
+            legend: {
+              display: false
             }
           }
         }}

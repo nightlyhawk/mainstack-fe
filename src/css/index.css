@@ -35,7 +35,15 @@ body {
 }
 
 .tabs {
+  display: flex;
   flex-direction: column;
+}
+.tabs h2 {
+  border-left: 4px solid #FF5403;
+}
+
+.pad {
+  padding-left: 40px;
 }
 
 .circleChart {
@@ -45,10 +53,14 @@ body {
 .circleChart h1 {
   color: black;
 }
-.circleChart .text {
+
+.text {
   text-align: left;
+  display: flex;
   flex-direction: column;
 }
-.circleChart .chart h2 {
+
+.chart h2 {
+  display: flex;
   color: #FF5403;
 }

@@ -6,16 +6,18 @@
     {
         color: $primary;
     }
-    .text
+}
+.text
+{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+.chart
+{
+    h2
     {
-        text-align: left;
-        flex-direction: column;
-    }
-    .chart
-    {
-        h2
-        {
-            color: $secondary;
-        }
+        display: flex;
+        color: $secondary;
     }
 }

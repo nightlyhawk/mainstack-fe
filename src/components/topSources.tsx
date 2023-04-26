@@ -36,10 +36,10 @@ export const TopSources: React.FunctionComponent = () => {
 
     return (
          <div className="circleChart right">
-            <h1>Top Sources</h1>
             {loading && <div>Loading....</div> }
             {error && <div>{error}</div> }
             <div className="text">
+            <h3>Top Sources</h3>
             { data &&  data.top_sources.map((item) => {
                return (
                 
@@ -55,8 +55,12 @@ export const TopSources: React.FunctionComponent = () => {
             <Doughnut
         data={chartData}
         options={{
-          plugins: {
-            title: {
+         responsive: true,
+         plugins: {
+           legend: {
+             position: 'left',
+           },
+           title: {
               display: true,
             }
           }

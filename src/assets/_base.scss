@@ -1,6 +1,13 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: "TestSöhne-Fett";
+  }
+
+  @font-face {
+    font-family: "TestSöhne-Fett";   /*Can be any text*/
+    src: local("TestSöhne-Fett"),
+      url("../font/TestSöhne-Fett.otf") format("opentype");
   }
   
   .dash { grid-area: a; }
@@ -13,10 +20,10 @@ body {
   .grid-container {
     display: grid;
     grid-template-areas:
-      'a a b b b b'
-      'a a c c c c'
-      'a a d d d d'
-      'a a e e f f';
+      'a a b b b'
+      'a a c c c'
+      'a a d d d'
+      'a a e ef f';
     gap: 30px;
   }  
   

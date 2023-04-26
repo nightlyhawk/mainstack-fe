@@ -15,8 +15,8 @@ export const TopLocations: React.FunctionComponent = () => {
 
     return (
          <div className="circleChart, left">
-            <h1>Top Locations</h1>
             <div className="text">
+            <h3>Top Locations</h3>
             { data &&  data.top_locations.map((item) => {
               return (
                 <p> 
@@ -30,7 +30,11 @@ export const TopLocations: React.FunctionComponent = () => {
             <Doughnut
         data={chartData}
         options={{
+          responsive: true,
           plugins: {
+            legend: {
+              position: 'left',
+            },
             title: {
               display: true,
             }

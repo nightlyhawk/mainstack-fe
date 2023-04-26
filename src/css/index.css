@@ -1,8 +1,14 @@
+@charset "UTF-8";
 body {
   margin: 0;
   padding: 0;
+  font-family: "TestSöhne-Fett";
 }
 
+@font-face {
+  font-family: "TestSöhne-Fett"; /*Can be any text*/
+  src: local("TestSöhne-Fett"), url("../font/TestSöhne-Fett.otf") format("opentype");
+}
 .dash {
   grid-area: a;
 }
@@ -29,7 +35,7 @@ body {
 
 .grid-container {
   display: grid;
-  grid-template-areas: "a a b b b b" "a a c c c c" "a a d d d d" "a a e e f f";
+  grid-template-areas: "a a b b b" "a a c c c" "a a d d d" "a a e ef f";
   gap: 30px;
 }
 
@@ -69,20 +75,28 @@ body {
   display: flex;
   flex-direction: row;
 }
-.circleChart h1 {
-  color: black;
-}
 
 .text {
   text-align: left;
   display: flex;
   flex-direction: column;
 }
+.text h3 {
+  color: black;
+}
+.text p {
+  display: flex;
+  justify-content: space-evenly;
+}
 
 .chart h2 {
   color: #FF5403;
 }
 
+.header {
+  position: relative;
+  bottom: 35px;
+}
 .header h1 {
   color: black;
 }
@@ -94,10 +108,16 @@ body {
   display: flex;
   flex-direction: row;
 }
+.header ul li {
+  text-align: center;
+  padding-right: 30px;
+}
 
 .focus {
   border: 2px solid #FF5403;
-  background-color: #ff5e12;
+  background-color: #ff651d;
   border-radius: 5px;
   color: #FF5403;
+  width: 70px;
+  height: 30px;
 }

@@ -1,5 +1,8 @@
 .header
 {
+    position: relative;
+    bottom: 35px;
+
     h1
     {
         color: $primary;
@@ -13,13 +16,20 @@
         list-style: none;
         display: flex;
         flex-direction: row;
+        li
+        {
+            text-align: center;
+            padding-right: 30px;
+        }
     }
 }
 
 .focus
 {
     border: 2px solid $secondary;
-    background-color: lighten($color: $secondary, $amount: 3);
+    background-color: lighten($color: $secondary, $amount: 5);
     border-radius: 5px;
     color: $secondary;
+    width: 70px;
+    height: 30px;
 }

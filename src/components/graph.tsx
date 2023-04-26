@@ -16,11 +16,11 @@ export const Graph = () => {
   const view = data?.graph_data.views;
   console.log(view);
     var chartData = {
-        labels: Object.keys(view), 
+        labels: Object.keys({view}), 
         datasets: [
           {
             label: "Page Views",
-            data: Object.values(view),
+            data: Object.values({view}),
             backgroundColor: [
                 "#f9d2c0",
                 

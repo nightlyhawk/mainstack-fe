@@ -2,7 +2,7 @@ import { useAxios } from './useAxios';
 import { Doughnut } from "react-chartjs-2";
 import { IJsonResponse } from "./topSources";
 import { PieChartI } from "./pieChart";
-import { Chart as ChartJS } from 'chart.js/auto'
+import { Chart } from 'chart.js/auto'
 
 
 
@@ -28,7 +28,7 @@ export const TopLocations: React.FunctionComponent = () => {
             </div>
             <div className="chart">
                 <h3>View full report</h3>
-           <div style={{ width: 500 }}>
+           <div style={{ width: 300 }}>
             <Doughnut
         data={chartData}
         options={{

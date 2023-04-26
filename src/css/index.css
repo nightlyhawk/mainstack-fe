@@ -15,6 +15,8 @@ body {
 
 .nav {
   grid-area: b;
+  right: 18%;
+  position: relative;
 }
 
 .header {
@@ -23,6 +25,8 @@ body {
 
 .chart-container {
   grid-area: d;
+  right: 18%;
+  position: relative;
 }
 
 .left {
@@ -53,6 +57,7 @@ body {
 }
 .tabs h2 {
   border-left: 4px solid #FF5403;
+  color: #FF5403;
 }
 .tabs a {
   text-decoration: none;
@@ -81,6 +86,8 @@ body {
 .circleChart {
   display: flex;
   flex-direction: row;
+  position: relative;
+  right: 33%;
 }
 
 .text {
@@ -91,9 +98,8 @@ body {
 .text h3 {
   color: black;
 }
-.text p {
-  display: flex;
-  justify-content: space-evenly;
+.text p span {
+  padding-left: 10px;
 }
 
 .chart h2 {
@@ -101,8 +107,9 @@ body {
 }
 
 .header {
+  bottom: 73px;
+  right: 18%;
   position: relative;
-  bottom: 35px;
 }
 .header h1 {
   color: black;
@@ -115,7 +122,7 @@ body {
   display: flex;
   flex-direction: row;
 }
-.header ul li {
+.header ul .normal {
   text-align: center;
   padding-right: 30px;
 }

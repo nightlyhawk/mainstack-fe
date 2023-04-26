@@ -1,7 +1,8 @@
 .header
 {
+    bottom: 73px;
+    right: 18%;
     position: relative;
-    bottom: 35px;
 
     h1
     {
@@ -16,7 +17,7 @@
         list-style: none;
         display: flex;
         flex-direction: row;
-        li
+        .normal
         {
             text-align: center;
             padding-right: 30px;

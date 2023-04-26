@@ -8,12 +8,12 @@ export const Header = () => {
         <p>Checkout your dashboard summary</p>
 
         <ul>
-            <li>1 Day</li>
-            <li>3 Days</li>
-            <li>7 Days</li>
-            <li>30 Days</li>
+            <li className="normal">1 Day</li >
+            <li className="normal">3 Days</li>
+            <li className="normal">7 Days</li>
+            <li className="normal">30 Days</li>
             <li className="focus">All time</li>
-            <li>Custom Data</li>
+            <li className="normal">Custom Data</li>
         </ul>
         </div>
     )

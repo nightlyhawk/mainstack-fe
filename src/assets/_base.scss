@@ -11,9 +11,15 @@ body {
   }
   
   .dash { grid-area: a; }
-  .nav { grid-area: b; }
+  .nav { grid-area: b; 
+    right: 18%;
+    position: relative;
+  }
   .header { grid-area: c;}
-  .chart-container { grid-area: d; }
+  .chart-container { grid-area: d; 
+    right: 18%;
+    position: relative;
+  }
   .left { grid-area: e; }
   .right { grid-area: f; }
   

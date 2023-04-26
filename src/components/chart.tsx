@@ -6,3 +6,4 @@
 // const { chartData } = Graph();
   
 // }
+export {};

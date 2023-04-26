@@ -1,3 +1,4 @@
+import { PieChartI } from './pieChart';
 import { useAxios } from './useAxios';
 
 
@@ -48,7 +49,7 @@ export const TopSources: React.FunctionComponent = () => {
             </div>
             <div className="chart">
             <h3>View full report</h3>
-            
+            <PieChartI />
             </div>
 
          </div>

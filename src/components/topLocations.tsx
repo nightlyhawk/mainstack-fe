@@ -1,5 +1,6 @@
 import { useAxios } from './useAxios';
 import { IJsonResponse } from "./topSources";
+import { PieChartII } from './pieChartII';
 
 
 
@@ -23,7 +24,7 @@ export const TopLocations: React.FunctionComponent = () => {
             </div>
             <div className="chart">
                 <h3>View full report</h3>
-           
+           <PieChartII />
             </div>
 
          </div>

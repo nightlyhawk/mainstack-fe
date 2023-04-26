@@ -14,19 +14,14 @@ export const Graph = () => {
  const [loading, data, error, request] = useAxios<IJsonResponse>(
   {method: 'GET', url: "https://fe-task-api.mainstack.io/"}
 );
-  // function value(){
-  //   for(const key in data?.graph_data.views){
-      
-  //     {key}: data?.graph_data.views[key]
-  //   }
-  // }
+  
   const view = data?.graph_data.views;
     const [chartData, setChartData] = useState({
-        labels: [Object.keys({view}).forEach(key => key)], 
+        labels: Object.keys({view}), 
         datasets: [
           {
             label: "Page Views",
-            data:[Object.values({view}).forEach(val => val)] ,
+            data: Object.values({view}),
             backgroundColor: [
                 "#f9d2c0",
                 

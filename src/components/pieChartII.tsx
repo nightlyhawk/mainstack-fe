@@ -27,7 +27,7 @@ export const PieChartII = () => {
                 "#FAB70A",
                 "#F09468"
             ],
-            hoverOffset: 4
+            //hoverOffset: 4
           }
         ]
       });

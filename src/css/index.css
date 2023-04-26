@@ -35,8 +35,10 @@ body {
 
 .grid-container {
   display: grid;
-  grid-template-areas: "a a b b b" "a a c c c" "a a d d d" "a a e ef f";
+  grid-template-areas: "a a b b b b" "a a c c c c" "a a d d d d" "a a e e f f";
   gap: 30px;
+  width: 100%;
+  grid-template-columns: 16.6666667% 16.6666667% 16.6666667% 16.6666667% 16.6666667% 16.6666667%;
 }
 
 .dash {
@@ -55,9 +57,14 @@ body {
 .tabs a {
   text-decoration: none;
 }
+.tabs a img {
+  position: relative;
+  top: 3px;
+}
 
 .pad {
   padding-left: 40px;
+  color: black;
 }
 
 .prof {
@@ -115,9 +122,10 @@ body {
 
 .focus {
   border: 2px solid #FF5403;
-  background-color: #ff651d;
-  border-radius: 5px;
+  background-color: #f9d2c0;
+  border-radius: 24px;
   color: #FF5403;
+  padding: 6px;
   width: 70px;
   height: 30px;
 }

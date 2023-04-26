@@ -15,11 +15,17 @@
     a
    {
     text-decoration: none;
+    img 
+    {
+        position: relative;
+        top: 3px;
+    }
   }
 }
 .pad
 {
     padding-left: 40px;
+    color: $primary;
 }
 
 .prof 

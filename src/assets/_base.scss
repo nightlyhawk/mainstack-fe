@@ -20,10 +20,13 @@ body {
   .grid-container {
     display: grid;
     grid-template-areas:
-      'a a b b b'
-      'a a c c c'
-      'a a d d d'
-      'a a e ef f';
+      'a a b b b b'
+      'a a c c c c'
+      'a a d d d d'
+      'a a e e f f';
     gap: 30px;
+    width: 100%;
+    grid-template-columns: 16.6666667% 16.6666667% 16.6666667% 16.6666667% 16.6666667% 16.6666667%;
   }  
+  
   

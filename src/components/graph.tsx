@@ -32,7 +32,7 @@ export const Graph = () => {
                 
             ],
             fill: 'origin',
-            borderColor: "none",
+            borderColor: "#599EEA",
             borderWidth: 2
           },
         ]

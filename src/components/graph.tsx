@@ -28,7 +28,7 @@ export const Graph = () => {
             label: "Page Views",
             data:[Object.values({view}).forEach(val => val)] ,
             backgroundColor: [
-                "#599EEA",
+                "#f9d2c0",
                 
             ],
             fill: 'origin',

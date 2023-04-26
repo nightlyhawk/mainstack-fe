@@ -10,7 +10,12 @@ export interface IJsonResponse {
  };
 
  interface graph_data {
-    views: any | {};
+    views: views;
+ }
+
+ interface views {
+   key: string;
+   values: number;
  }
 
  interface top_locations {

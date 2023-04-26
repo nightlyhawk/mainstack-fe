@@ -3,6 +3,7 @@ import { CategoryScale, Filler } from "chart.js";
 import { useState } from "react";
 import { useAxios } from './useAxios';
 import { IJsonResponse } from "./topSources";
+import { isObject } from "chart.js/dist/helpers/helpers.core";
 
 
 
@@ -21,11 +22,11 @@ export const Graph = () => {
   // }
   const view = data?.graph_data.views;
     const [chartData, setChartData] = useState({
-        labels: [Object.keys(view).forEach(key => key)], 
+        labels: [Object.keys({view}).forEach(key => key)], 
         datasets: [
           {
             label: "Page Views",
-            data:[Object.values(view).forEach(val => val)] ,
+            data:[Object.values({view}).forEach(val => val)] ,
             backgroundColor: [
                 "#599EEA",
                 

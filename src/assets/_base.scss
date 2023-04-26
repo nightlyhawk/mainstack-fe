@@ -7,7 +7,7 @@ body {
   @font-face {
     font-family: "TestSöhne-Fett";   /*Can be any text*/
     src: local("TestSöhne-Fett"),
-      url("../font/TestSöhne-Fett.otf") format("opentype");
+      url("../fonts/TestSöhne-Fett.otf") format("opentype");
   }
   
   .dash { grid-area: a; }

@@ -40,9 +40,13 @@ export const PieChartII = () => {
          plugins: {
            legend: {
              position: 'left',
+             labels: {
+              pointStyle: "circle",
+              padding: 30,
+             }
            },
            title: {
-              display: true,
+              display: false,
             }
           }
         }}

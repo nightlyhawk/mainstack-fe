@@ -19,15 +19,13 @@ export const Graph = () => {
   //     {key}: data?.graph_data.views[key]
   //   }
   // }
-  const view = data?.graph_data.views
-  const keys = Object.keys(view);
-  const values = Object.values(view);
+  const view = data?.graph_data.views;
     const [chartData, setChartData] = useState({
-        labels: [keys.forEach(val => val)], 
+        labels: [Object.keys(view).forEach(key => key)], 
         datasets: [
           {
             label: "Page Views",
-            data:[values.forEach(val => val)] ,
+            data:[Object.values(view).forEach(val => val)] ,
             backgroundColor: [
                 "#599EEA",
                 

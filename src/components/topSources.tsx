@@ -13,13 +13,6 @@ export interface IJsonResponse {
     views: any;
  }
 
- interface views {
-    keys: values;
- }
- interface values {
-    values: number;
- }
-
  interface top_locations {
     country: string;
     count: number;

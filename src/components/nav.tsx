@@ -1,6 +1,6 @@
 export  const Nav = () => {
     return (
-        <nav>
+        <nav className="nav">
             <h1>
                 Dashboard
             </h1>

@@ -1,6 +1,6 @@
 import { useAxios } from './useAxios';
 import { PieChartII } from "./pieChartII";
-import { Pie } from "react-chartjs-2";
+import { Doughnut } from "react-chartjs-2";
 
 
 export interface IJsonResponse {
@@ -10,12 +10,7 @@ export interface IJsonResponse {
  };
 
  interface graph_data {
-    views: views;
- }
-
- interface views {
-   key: string;
-   values: number;
+    views: {};
  }
 
  interface top_locations {
@@ -40,22 +35,24 @@ export const TopSources: React.FunctionComponent = () => {
     );
 
     return (
-         <div className="circleChart">
+         <div className="circleChart left">
             <h1>Top Offers</h1>
             {loading && <div>Loading....</div> }
             {error && <div>{error}</div> }
+            <div className="text">
             { data &&  data.top_sources.map((item) => {
                return (
-                <div className="text">
+                
                 <p> 
                  {item.source}
                    <span>{item.count}</span>
                  </p>
-            </div>
-            )
+             )
             }) }
+            </div>
             <div className="chart">
-            <Pie
+            <h3>View full report</h3>
+            <Doughnut
         data={chartData}
         options={{
           plugins: {

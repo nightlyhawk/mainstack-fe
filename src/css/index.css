@@ -4,9 +4,38 @@ body {
 }
 
 .dash {
+  grid-area: a;
+}
+
+.nav {
+  grid-area: b;
+}
+
+.chart-container {
+  grid-area: c;
+}
+
+.left {
+  grid-area: d;
+}
+
+.right {
+  grid-area: e;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas: "a a b b b b" "a a c c c c" "a a d d e e";
+}
+
+.dash {
   display: flex;
   flex-direction: column;
   width: 15%;
+}
+
+.tabs {
+  flex-direction: column;
 }
 
 .circleChart {
@@ -18,6 +47,7 @@ body {
 }
 .circleChart .text {
   text-align: left;
+  flex-direction: column;
 }
 .circleChart .chart h2 {
   color: #FF5403;

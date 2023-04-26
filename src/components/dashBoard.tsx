@@ -20,7 +20,7 @@ export const DashBoard = () => {
             <div>
                 <img src={logo} alt="logo" />
             </div>
-            <div>
+            <div className='tabs'>
                 <h2><img src={db} alt="dashboard" />Dashboard</h2>
                 <NavLink to=""> <img src={edit} alt="edit" /> item 1</NavLink>
                 <NavLink to=""><img src={ran} alt="group" />item 2</NavLink>

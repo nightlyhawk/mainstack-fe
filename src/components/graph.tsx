@@ -1,6 +1,7 @@
 import Chart from "chart.js/auto";
 import { CategoryScale } from "chart.js";
 import { Line } from "react-chartjs-2";
+import React from 'react';
 import { useAxios } from './useAxios';
 import { IJsonResponse } from "./topSources";
 import { views } from "./topSources";
@@ -10,10 +11,16 @@ import { useState } from "react";
 
 Chart.register(CategoryScale);
 
-export const Graph = () => {
+export default class Graph extends React.Component<{}, {}, any>{
+
+ 
+return(){
+  
  const [loading, data, error, request] = useAxios<IJsonResponse>(
   {method: 'GET', url: "https://fe-task-api.mainstack.io/"}
 );
+
+function dta(){
   if(data){
     let view = data.graph_data.views
  
@@ -57,4 +64,13 @@ export const Graph = () => {
           </div>
         </div>
       );
+}
+}
+
+  // const val = this.dta();
+
+  // return (
+  //   <div>{val}</div>
+  // )
+
 }}

@@ -30,7 +30,7 @@ export const Graph = () => {
                     
                 ],
                 fill: true,
-                borderColor: "#599EEA",
+                borderColor: "#ff5403",
                 tension: 0.2,
               },
             ]

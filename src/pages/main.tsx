@@ -3,7 +3,7 @@ import { DashBoard } from "../components/dashBoard";
 import { TopLocations } from "../components/topLocations";
 import { TopSources } from "../components/topSources";
 import { Header } from "../components/header";
-import  Graph  from "../components/graph";
+import { Graph }  from "../components/graph";
 
 
 

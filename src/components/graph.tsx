@@ -4,6 +4,7 @@ import { Line } from "react-chartjs-2";
 import { useAxios } from './useAxios';
 import { IJsonResponse } from "./topSources";
 import { views } from "./topSources";
+import { useState } from "react";
 
 
 
@@ -13,13 +14,10 @@ export const Graph = () => {
  const [loading, data, error, request] = useAxios<IJsonResponse>(
   {method: 'GET', url: "https://fe-task-api.mainstack.io/"}
 );
-
-const view = () => {
   if(data){
-    return data.graph_data.views
-  }
-}
-console.log(view)
+    let view = data.graph_data.views
+ 
+     console.log(view)
      var chartData = {
           labels: Object.keys(view),
           datasets: [
@@ -36,7 +34,6 @@ console.log(view)
             },
           ]
         };
-      
 
       return (
         <div className="chart-container">
@@ -45,7 +42,7 @@ console.log(view)
           <h1 style={{ textAlign: "left" }}>500</h1>
           <div style={{ width: 700 }}>
           <Line
-            data= {chartData}
+            data= { chartData }
             options={{
               plugins: {
                 title: {
@@ -60,4 +57,4 @@ console.log(view)
           </div>
         </div>
       );
-}
+}}

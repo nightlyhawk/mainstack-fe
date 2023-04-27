@@ -12,18 +12,32 @@ export interface IJsonResponse {
     views: views;
  }
 
- export interface views {
-      "2022-07-31": number,
-      "2022-08-01": number,
-      "2022-08-02": number,
-      "2022-08-03": number,
-      "2022-08-04": number,
-      "2022-08-05": number,
-      "2022-08-06": number,
-      "2022-08-07": number,
-      "2022-08-08": number,
-      "2022-08-09": number
- }
+//  export interface views {
+//       "2022-07-31": number,
+//       "2022-08-01": number,
+//       "2022-08-02": number,
+//       "2022-08-03": number,
+//       "2022-08-04": number,
+//       "2022-08-05": number,
+//       "2022-08-06": number,
+//       "2022-08-07": number,
+//       "2022-08-08": number,
+//       "2022-08-09": number
+//  }
+export interface views {
+  [key: number]: {
+    "2022-07-31": number,
+          "2022-08-01": number,
+          "2022-08-02": number,
+          "2022-08-03": number,
+          "2022-08-04": number,
+          "2022-08-05": number,
+          "2022-08-06": number,
+          "2022-08-07": number,
+          "2022-08-08": number,
+          "2022-08-09": number
+  }
+}
 
  interface top_locations {
     country: string;

@@ -26,7 +26,8 @@ export const useAxios = <T>(
     axios(config)
     .then((response) => {
       setError('');
-      setData(response.data);
+      if (response.data !== undefined){
+      setData(response.data);}
     })
     .catch((error) => {
       setError(error.message);

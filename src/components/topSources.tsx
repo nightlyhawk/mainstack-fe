@@ -12,7 +12,7 @@ export interface IJsonResponse {
     views: views;
  }
 
- interface views {
+ export interface views {
       "2022-07-31": number,
       "2022-08-01": number,
       "2022-08-02": number,

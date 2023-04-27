@@ -19,6 +19,7 @@ const view = () => {
     return data.graph_data.views
   }
 }
+console.log(view)
      var chartData = {
           labels: Object.keys(view),
           datasets: [
